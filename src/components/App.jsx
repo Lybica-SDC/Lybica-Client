@@ -20,6 +20,7 @@ function App() {
     product, setProduct,
   } = useContext(ProductContext);
 
+  // TODO: Refactor these methods so they will conform to the newly built API
   useEffect(() => {
     axios
       .get('https://app-hrsei-api.herokuapp.com/api/fec2/hr-rfp/products/40348', {
