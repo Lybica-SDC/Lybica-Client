@@ -1,4 +1,4 @@
-# Techstyles
+# Sharingan Shop
 
 A fashionable e-commerce site built for a pleasent user experience.
 
