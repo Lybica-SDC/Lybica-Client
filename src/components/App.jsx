@@ -8,11 +8,6 @@ import { ProductContext } from '../contexts/ProductContext';
 import Loading from './RIC/Loading';
 import Navigation from './Navigation';
 
-// const useFetchData = async (url, options) => {
-//   const res = await axios.get(url, { headers: { Authorization: 'key'}, ...options});
-//   return res.json()
-// }
-
 function App() {
   // const [product, setProduct] = useState({});
   const [itemsTotal, setItemsTotal] = useState(0);
