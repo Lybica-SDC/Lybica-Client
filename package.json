@@ -4,10 +4,11 @@
   "description": "",
   "private": true,
   "scripts": {
-    "start": "webpack && node server.js",
+    "start": "node server.js",
     "test": "jest",
-    "dev": "webpack serve",
-    "build": "webpack --watch",
+    "client-dev": "npx webpack --watch",
+    "server-dev": "npx nodemon --watch server server.js",
+    "build": "npx webpack",
     "compileCSS": "postcss src/styles.css -o dist/styles.css --watch",
     "test-coverage": "jest --coverage"
   },
