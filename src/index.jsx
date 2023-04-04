@@ -1,12 +1,16 @@
 import React from 'react';
 import './styles.css';
-import { render } from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import App from './components/App';
 import { ProductProvider } from './contexts/ProductContext';
 
-render(
+const container = document.createElement('div');
+container.setAttribute('id', 'root');
+document.body.appendChild(container);
+const root = createRoot(container);
+
+root.render(
   <ProductProvider>
     <App />
   </ProductProvider>,
-  document.getElementById('root'),
 );
