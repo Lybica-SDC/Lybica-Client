@@ -28,6 +28,7 @@ function App() {
         },
       })
       .then((result) => {
+        console.log(result.data);
         setProduct(result.data);
       })
       .catch((err) => {
