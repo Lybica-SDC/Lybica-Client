@@ -26,7 +26,8 @@ function CardListEntry({
   useEffect(() => {
     // console.log('related item id', relatedItem.id, 'prodId', product);
     axios
-      .get(`https://app-hrsei-api.herokuapp.com/api/fec2/hr-rfp/products/${relatedItem.id}/styles`, {
+      .get(`/products/${relatedItem.id}/styles`, {
+      // .get(`https://app-hrsei-api.herokuapp.com/api/fec2/hr-rfp/products/${relatedItem.id}/styles`, {
         headers: {
           Authorization: process.env.AUTH_TOKEN,
         },

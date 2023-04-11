@@ -29,7 +29,8 @@ function Overview({ incrementCart }) {
   const [normalView, setNormalView] = useState(true);
 
   useEffect(() => {
-    axios.get(`https://app-hrsei-api.herokuapp.com/api/fec2/hr-rfp/products/${product.id}/styles`, {
+    axios.get(`/products/${product.id}/styles`, {
+    // axios.get(`https://app-hrsei-api.herokuapp.com/api/fec2/hr-rfp/products/${product.id}/styles`, {
       headers: { Authorization: process.env.AUTH_TOKEN },
     })
       .then((response) => {
@@ -37,7 +38,6 @@ function Overview({ incrementCart }) {
         const IDnumber = response.data.results[0].style_id;
         setStyleID(IDnumber);
         setCurrentStyle(response.data.results[0]);
-        // console.log('current Style', response.data.results[0].skus);
         setInventory(response.data.results[0].skus);
         setStyleName(response.data.results[0].name);
         setMainImage(response.data.results[0].photos[0].url);

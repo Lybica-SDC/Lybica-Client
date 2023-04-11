@@ -22,7 +22,8 @@ function App() {
 
   useEffect(() => {
     axios
-      .get('https://app-hrsei-api.herokuapp.com/api/fec2/hr-rfp/products/40348', {
+      .get('/products/40349', {
+      // .get('https://app-hrsei-api.herokuapp.com/api/fec2/hr-rfp/products/40348', {
         headers: {
           Authorization: process.env.AUTH_TOKEN,
         },
@@ -39,7 +40,8 @@ function App() {
   const changeProdClick = (prodId) => {
     setProduct({});
     axios
-      .get(`https://app-hrsei-api.herokuapp.com/api/fec2/hr-rfp/products/${prodId}`, {
+      .get(`/products/${prodId}`, {
+      // .get(`https://app-hrsei-api.herokuapp.com/api/fec2/hr-rfp/products/${prodId}`, {
         headers: {
           Authorization: process.env.AUTH_TOKEN,
         },

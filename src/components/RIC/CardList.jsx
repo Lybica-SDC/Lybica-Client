@@ -13,7 +13,8 @@ function CardList({ prod, changeProdClick }) {
   useEffect(() => {
     // console.log('here');
     axios
-      .get(`https://app-hrsei-api.herokuapp.com/api/fec2/hr-rfp/products/${prodId}/related`, {
+      .get(`/products/${prodId}/related`, {
+      // .get(`https://app-hrsei-api.herokuapp.com/api/fec2/hr-rfp/products/${prodId}/related`, {
         headers: {
           Authorization: process.env.AUTH_TOKEN,
         },
@@ -23,7 +24,8 @@ function CardList({ prod, changeProdClick }) {
         // console.log('related items id', data);
         const listOfRelatedItems = uniqueId.map((relatedId) => (
           axios
-            .get(`https://app-hrsei-api.herokuapp.com/api/fec2/hr-rfp/products/${relatedId}`, {
+            .get(`/products/${relatedId}`, {
+            // .get(`https://app-hrsei-api.herokuapp.com/api/fec2/hr-rfp/products/${relatedId}`, {
               headers: {
                 Authorization: process.env.AUTH_TOKEN,
               },
